@@ -1,0 +1,9 @@
+[webserver]
+webserver ansible_ssh_host=10.10.10.11 
+
+[database]
+database ansible_ssh_host=10.10.10.12
+
+[servidores:children]
+webserver
+database

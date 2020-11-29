@@ -1,0 +1,19 @@
+---
+- name: Atualização do sistema
+  apt:
+      name=*
+      state=latest
+      update_cache=yes
+- name: Instalação do apache
+  apt:
+      name= "{{ packages }}"
+      state=latest
+      update_cache=yes
+  vars:
+      packages:
+          - apache2
+          - libapache2-mod-wsgi
+          - python-pip
+          - python-virtualenv
+          - tcpdump
+

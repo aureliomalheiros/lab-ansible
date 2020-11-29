@@ -1,0 +1,16 @@
+---
+- name: Atualização dos sistema Operacional
+  yum: 
+    name=*
+    state=latest
+    update_cache=yes
+- name: Instalação de pacotes
+  yum:
+      name: "{{ packages }}"
+  state: latest
+  vars:
+      packages:
+          - net-tools
+          - vim
+          - nmap
+---

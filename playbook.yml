@@ -1,0 +1,8 @@
+- name: Instalação para servidor Web
+  hosts: webserver
+  roles:
+      - common
+- name: Install MySQL
+  hosts: database
+  roles:
+      - common
