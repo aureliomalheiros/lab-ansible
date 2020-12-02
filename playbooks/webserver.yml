@@ -1,0 +1,8 @@
+---
+- hosts: webserver
+  tasks:
+      - name: Instalando Nginx
+        apt: name=nginx state=present update_cache=yes
+
+      - name: Instalando Nginx
+        service: name=nginx state=started enabled=yes
